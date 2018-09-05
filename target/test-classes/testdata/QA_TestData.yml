@@ -1,0 +1,5 @@
+app_url: http://10.0.1.86/tatoc/
+
+credentials:
+  email: xyz@gmail.com
+  password: Password@123

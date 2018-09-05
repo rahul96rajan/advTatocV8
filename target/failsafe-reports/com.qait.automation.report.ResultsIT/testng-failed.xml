@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [com.qait.automation.report.ResultsIT]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.qait.automation.report.ResultsIT">
+        <methods>
+          <include name="setupMailConfig"/>
+          <include name="sendResultsMail"/>
+        </methods>
+      </class> <!-- com.qait.automation.report.ResultsIT -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.qait.automation.report.ResultsIT] -->

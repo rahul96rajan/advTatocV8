@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+    <line>
+      <![CDATA[The application url is :- http://10.0.1.86/tatoc/]]>
+    </line>
+    <line>
+      <![CDATA[The application url is :- http://10.0.1.86/tatoc/]]>
+    </line>
+    <line>
+      <![CDATA[PASSED: PageTitle for Hover Menu - Advanced Course - T.A.T.O.C contains: 'Hover Menu'.]]>
+    </line>
+    <line>
+      <![CDATA[PASSED: PageTitle for Query Gate - Advanced Course - T.A.T.O.C contains: 'Query Gate'.]]>
+    </line>
+    <line>
+      <![CDATA[PASSED: PageTitle for Video Player - Advanced Course - T.A.T.O.C contains: 'Video Player'.]]>
+    </line>
+    <line>
+      <![CDATA[PASSED: PageTitle for Restful - Advanced Course - T.A.T.O.C contains: 'Restful'.]]>
+    </line>
+    <line>
+      <![CDATA[PASSED: PageTitle for File Handle - Advanced Course - T.A.T.O.C contains: 'File Handle'.]]>
+    </line>
+    <line>
+      <![CDATA[PASSED: PageTitle for End - T.A.T.O.C contains: 'End'.]]>
+    </line>
+  </reporter-output>
+  <suite name="Sample_Test_suite" duration-ms="13926" started-at="2018-09-05T13:19:24Z" finished-at="2018-09-05T13:19:38Z">
+    <groups>
+    </groups>
+    <test name="TestSuite" duration-ms="13926" started-at="2018-09-05T13:19:24Z" finished-at="2018-09-05T13:19:38Z">
+      <class name="com.qait.sakurai.automation.tests.TatocAdv_Test">
+        <test-method status="PASS" signature="TestSessionInitiators()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="TestSessionInitiators" is-config="true" duration-ms="100" started-at="2018-09-05T18:49:24Z" finished-at="2018-09-05T18:49:24Z">
+          <reporter-output>
+            <line>
+              <![CDATA[The application url is :- http://10.0.1.86/tatoc/]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TestSessionInitiators -->
+        <test-method status="PASS" signature="launchMyApplication()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="launchMyApplication" is-config="true" duration-ms="6271" started-at="2018-09-05T18:49:24Z" finished-at="2018-09-05T18:49:30Z">
+          <reporter-output>
+            <line>
+              <![CDATA[The application url is :- http://10.0.1.86/tatoc/]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchMyApplication -->
+        <test-method status="PASS" signature="logTestMethod(java.lang.reflect.Method)[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="logTestMethod" is-config="true" duration-ms="2" started-at="2018-09-05T18:49:30Z" finished-at="2018-09-05T18:49:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qait.sakurai.automation.tests.TatocAdv_Test.testClickOnAdvCourse()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestMethod -->
+        <test-method status="PASS" signature="testClickOnAdvCourse()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="testClickOnAdvCourse" duration-ms="226" started-at="2018-09-05T18:49:30Z" finished-at="2018-09-05T18:49:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[PASSED: PageTitle for Hover Menu - Advanced Course - T.A.T.O.C contains: 'Hover Menu'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testClickOnAdvCourse -->
+        <test-method status="PASS" signature="testMoveToMenu2AndGoNext()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="testMoveToMenu2AndGoNext" duration-ms="231" started-at="2018-09-05T18:49:31Z" finished-at="2018-09-05T18:49:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[PASSED: PageTitle for Query Gate - Advanced Course - T.A.T.O.C contains: 'Query Gate'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testMoveToMenu2AndGoNext -->
+        <test-method status="PASS" signature="logTestMethod(java.lang.reflect.Method)[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="logTestMethod" is-config="true" duration-ms="0" started-at="2018-09-05T18:49:31Z" finished-at="2018-09-05T18:49:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qait.sakurai.automation.tests.TatocAdv_Test.testMoveToMenu2AndGoNext()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestMethod -->
+        <test-method status="PASS" signature="logTestMethod(java.lang.reflect.Method)[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="logTestMethod" is-config="true" duration-ms="1" started-at="2018-09-05T18:49:31Z" finished-at="2018-09-05T18:49:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qait.sakurai.automation.tests.TatocAdv_Test.testfetchCredentialsEnterAndProceed()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestMethod -->
+        <test-method status="PASS" signature="testfetchCredentialsEnterAndProceed()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="testfetchCredentialsEnterAndProceed" duration-ms="1286" started-at="2018-09-05T18:49:31Z" finished-at="2018-09-05T18:49:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[PASSED: PageTitle for Video Player - Advanced Course - T.A.T.O.C contains: 'Video Player'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testfetchCredentialsEnterAndProceed -->
+        <test-method status="PASS" signature="testSkipThePlayerPage()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="testSkipThePlayerPage" duration-ms="190" started-at="2018-09-05T18:49:32Z" finished-at="2018-09-05T18:49:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[PASSED: PageTitle for Restful - Advanced Course - T.A.T.O.C contains: 'Restful'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSkipThePlayerPage -->
+        <test-method status="PASS" signature="logTestMethod(java.lang.reflect.Method)[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="logTestMethod" is-config="true" duration-ms="0" started-at="2018-09-05T18:49:32Z" finished-at="2018-09-05T18:49:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qait.sakurai.automation.tests.TatocAdv_Test.testSkipThePlayerPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestMethod -->
+        <test-method status="PASS" signature="logTestMethod(java.lang.reflect.Method)[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="logTestMethod" is-config="true" duration-ms="1" started-at="2018-09-05T18:49:32Z" finished-at="2018-09-05T18:49:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qait.sakurai.automation.tests.TatocAdv_Test.testGetSessionAndPostSignature() throws org.apache.http.client.ClientProtocolException,java.io.IOException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestMethod -->
+        <test-method status="PASS" signature="testGetSessionAndPostSignature()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="testGetSessionAndPostSignature" duration-ms="795" started-at="2018-09-05T18:49:32Z" finished-at="2018-09-05T18:49:33Z">
+          <reporter-output>
+            <line>
+              <![CDATA[PASSED: PageTitle for File Handle - Advanced Course - T.A.T.O.C contains: 'File Handle'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testGetSessionAndPostSignature -->
+        <test-method status="PASS" signature="logTestMethod(java.lang.reflect.Method)[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="logTestMethod" is-config="true" duration-ms="0" started-at="2018-09-05T18:49:33Z" finished-at="2018-09-05T18:49:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qait.sakurai.automation.tests.TatocAdv_Test.testDownloadFileAndInputSign() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logTestMethod -->
+        <test-method status="PASS" signature="testDownloadFileAndInputSign()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="testDownloadFileAndInputSign" duration-ms="3548" started-at="2018-09-05T18:49:33Z" finished-at="2018-09-05T18:49:37Z">
+          <reporter-output>
+            <line>
+              <![CDATA[PASSED: PageTitle for End - T.A.T.O.C contains: 'End'.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testDownloadFileAndInputSign -->
+        <test-method status="PASS" signature="stop_test_session()[pri:0, instance:com.qait.sakurai.automation.tests.TatocAdv_Test@6500df86]" name="stop_test_session" is-config="true" duration-ms="1368" started-at="2018-09-05T18:49:37Z" finished-at="2018-09-05T18:49:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stop_test_session -->
+      </class> <!-- com.qait.sakurai.automation.tests.TatocAdv_Test -->
+    </test> <!-- TestSuite -->
+  </suite> <!-- Sample_Test_suite -->
+</testng-results>
