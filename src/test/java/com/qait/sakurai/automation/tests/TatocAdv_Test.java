@@ -1,40 +1,37 @@
 package com.qait.sakurai.automation.tests;
 
-import java.io.IOException;
-import org.apache.http.client.ClientProtocolException;
 import org.testng.annotations.Test;
 import com.qait.automation.TestSessionInitiator;
 
 public class TatocAdv_Test extends TestSessionInitiator {
 	
-	@Test(priority = 0)
-	public void testClickOnAdvCourse() {
+	@Test
+	public void Test1_testClickOnAdvCourse() {
 		tatocAdv.clickOnAdvCourse();		
 	}
 	
-	@Test(priority = 1)
-	public void testMoveToMenu2AndGoNext() {
+	@Test
+	public void Test2_testMoveToMenu2AndGoNext() {
 		tatocAdv.moveToMenu2AndGoNext();
 	}
 	
-	@Test(priority = 2)
-	public void testfetchCredentialsEnterAndProceed() {
+	@Test
+	public void Test3_testfetchCredentialsEnterAndProceed() {
 		tatocAdv.fetchCredentialsEnterAndProceed();
-		
 	}
 	
-	@Test(priority = 3)
-	public void testSkipThePlayerPage() {
+	@Test
+	public void Test4_testSkipThePlayerPage() {
 		tatocAdv.skipThePlayerPage();
 	}
 	
-	@Test(priority = 4)
-	public void testGetSessionAndPostSignature() throws ClientProtocolException, IOException {
+	@Test
+	public void Test5_testGetSessionAndPostSignature() {
 		tatocAdv.getSessionAndPostSignature();
 	}
 	
-	@Test(priority = 5)
-	public void testDownloadFileAndInputSign() throws InterruptedException{
+	@Test
+	public void Test6_testDownloadFileAndInputSign(){
 		tatocAdv.downloadFileOnFileHandPage();
 		tatocAdv.readFiledataAndEnterSignature();		
 	}

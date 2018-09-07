@@ -9,12 +9,14 @@ import static com.qait.automation.utils.YamlReader.getData;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Map;
 
 import com.google.common.base.Strings;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -68,6 +70,21 @@ public class WebDriverFactory {
         	  cap = DesiredCapabilities.firefox();
         } else if (browser.equalsIgnoreCase("chrome")) {
             cap = DesiredCapabilities.chrome();
+            
+            //
+            String downloadFilepath = "C:/Users/rahulrajan/Downloads";
+            HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+            chromePrefs.put("profile.default_content_settings.popups", 0);
+            chromePrefs.put("download.default_directory", downloadFilepath);
+            ChromeOptions options = new ChromeOptions();
+            options.setExperimentalOption("prefs", chromePrefs);
+            
+            cap.setCapability(ChromeOptions.CAPABILITY, options);
+            //
+            
+            
+            
+            
         } else if (browser.equalsIgnoreCase("Safari")) {
             cap = DesiredCapabilities.safari();
         } else if ((browser.equalsIgnoreCase("ie"))
@@ -88,6 +105,8 @@ public class WebDriverFactory {
 
     private static WebDriver getChromeDriver(String driverpath) {
     	driverpath=driverpath+"chromedriver.exe";
+//    	System.out.println("drivber path for chrome: " + driverpath); // 06-09-2018
+//    	System.exit(0);
     	    System.setProperty("webdriver.chrome.driver", driverpath);
         capabilities.setJavascriptEnabled(true);
         return new ChromeDriver(capabilities);

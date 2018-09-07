@@ -5,10 +5,11 @@
     <classes>
       <class name="com.qait.sakurai.automation.tests.TatocAdv_Test">
         <methods>
-          <include name="testDownloadFileAndInputSign"/>
+          <include name="Test6_testDownloadFileAndInputSign"/>
           <include name="TestSessionInitiators"/>
           <include name="stop_test_session"/>
           <include name="logTestMethod"/>
+          <include name="Test5_testGetSessionAndPostSignature"/>
           <include name="launchMyApplication"/>
         </methods>
       </class> <!-- com.qait.sakurai.automation.tests.TatocAdv_Test -->

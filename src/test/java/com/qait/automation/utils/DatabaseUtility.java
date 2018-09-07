@@ -315,6 +315,25 @@ public class DatabaseUtility {
 		}
 		return credentials;
 	}
+	
+	
+	public static ArrayList<String> fetchCredentials(String url,String user_name,String password,String Symbol_Text) {
+		ArrayList<String> credentials = new ArrayList<String>();
+		try {
+			Connection con = DriverManager.getConnection(url,user_name, password);
+			Statement stmt = con.createStatement();
+			ResultSet rsI = stmt.executeQuery("SELECT * from identity where symbol='" + Symbol_Text + "'");
+			rsI.next();
+			ResultSet rsC = stmt.executeQuery("SELECT * from credentials where id=" + rsI.getString("id"));
+			rsC.next();
+			credentials.add(rsC.getString("name"));
+			credentials.add(rsC.getString("passkey"));			
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
+		return credentials;
+	}
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 

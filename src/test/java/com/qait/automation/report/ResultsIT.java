@@ -41,7 +41,7 @@ import com.qait.automation.utils.YamlReader;
 
 public class ResultsIT {
 
-	String today = new Date().toString();
+	/*String today = new Date().toString();
 	String resultOfRun = null;
 	String host = "smtp.gmail.com";
 	String from = "automation.resultsqait@gmail.com";
@@ -399,5 +399,5 @@ public class ResultsIT {
 
 		table=table+"</tbody></table>";
 		return table;
-	}
+	}*/
 }

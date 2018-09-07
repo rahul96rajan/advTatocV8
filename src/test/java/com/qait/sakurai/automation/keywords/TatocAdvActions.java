@@ -2,16 +2,13 @@ package com.qait.sakurai.automation.keywords;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.tools.ant.input.PropertyFileInputHandler;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
 import com.qait.automation.getpageobjects.GetPage;
 import com.qait.automation.utils.APIClient;
 import com.qait.automation.utils.DatabaseUtility;
 import com.qait.automation.utils.PropFileHandler;
+import com.qait.automation.utils.YamlReader;
 
 public class TatocAdvActions extends GetPage {
 
@@ -20,58 +17,65 @@ public class TatocAdvActions extends GetPage {
 	}
 
 	public void clickOnAdvCourse() {
-//		isElementDisplayed("advCrseLnk");
-		element("advCrseLnk").click();
+		clickOnAnchorTagLink("Advanced Course");
 		verifyPageTitleContains("Hover Menu");
 	}
 
 	public void moveToMenu2AndGoNext() {
-		hover(element("menu2"));
-		element("nextBtn").click();
+		hover(element("divTag_menu2"));
+		element("spanTag_nextBtn").click();
 		verifyPageTitleContains("Query Gate");
 	}
 
 	public void fetchCredentialsEnterAndProceed() {
-		String sym = element("symbol").getText();
-		ArrayList<String> cred = DatabaseUtility.fetchCredentials("tatoc", "tatocuser", "tatoc01", "10.0.1.86", "3306",
-				sym);
-		element("nameTextFld").sendKeys(cred.get(0));
-		element("pskeyFld").sendKeys(cred.get(1));
-		element("submitBtn").click();
+		String symbol_text = element("divTag_symbol").getText();
+		String url = YamlReader.getData("DB_url");
+		String user_name = YamlReader.getData("DB_userName");
+		String password = YamlReader.getData("DB_password");
+		ArrayList<String> cred = DatabaseUtility.fetchCredentials(url, user_name, password, symbol_text);
+		element("inputTag_nameTextFld").sendKeys(cred.get(0));
+		element("inputTag_passkeyFld").sendKeys(cred.get(1));
+		element("inputTag_submitBtn").click();
 		verifyPageTitleContains("Video Player");
 	}
 
 	public void skipThePlayerPage() {
 		executeJavascript("played=true;");
-		element("proceedLnk").click();
+		clickOnAnchorTagLink("Proceed");
 		verifyPageTitleContains("Restful");
 	}
 
-	public void getSessionAndPostSignature() throws ClientProtocolException, IOException {
-		String getUrl = "http://10.0.1.86/tatoc/advanced/rest/service/token/";
-		String post_url = "http://10.0.1.86/tatoc/advanced/rest/service/register";
-		APIClient.getSessionAndPostSignature(element("sessionObj"), getUrl, post_url);
-		element("proceedLink").click();
+	public void getSessionAndPostSignature(){
+		String getUrl = YamlReader.getData("get_url");
+		String post_url = YamlReader.getData("post_url");
+		try {
+			APIClient.getSessionAndPostSignature(element("spanTag_sessionObj"), getUrl, post_url);
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		clickOnAnchorTagLink("Proceed");
 		verifyPageTitleContains("File Handle");
 	}
 
-	public void downloadFileOnFileHandPage() throws InterruptedException {
-		element("downloadLnk").click();
-		hardWait(3);
+	public void downloadFileOnFileHandPage() {
+		clickOnAnchorTagLink("Download File");
+		wait.waitForFileToBeFound(YamlReader.getData("filePath"));
 	}
 
 	public void readFiledataAndEnterSignature() {
-		String filePath = "C:/Users/rahulrajan/Downloads/file_handle_test.dat";
+		String filePath = YamlReader.getData("filePath");
 		String signature = PropFileHandler.readProperty("Signature", filePath);
-		element("signatureField").sendKeys(signature);
-		element("proceedBtn").click();
-//		PropFileHandler.deleteFile(filePath);
-		verifyPageTitleContains("End");    
+		element("inputTag_signatureField").sendKeys(signature);
+		element("inputTag_proceedBtn").click();
+		System.out.println("##### FILE DELETE RESULT #####\n");
+		PropFileHandler.deleteFile(filePath);
+		verifyPageTitleContains("End");
 	}
-
-
-	/*
-	 * filedir=C:/Users/rahulrajan/Downloads/file_handle_test.dat
-	 */
+	
+	public void clickOnAnchorTagLink(String linkName) {
+		element("anchorTag_Lnks" , linkName).click();
+	}
 
 }

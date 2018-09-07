@@ -1,15 +1,12 @@
 Title: Tatoc Advanced Automation
 
-advCrseLnk: xpath: //a[text()='Advanced Course']
-menu2: css: div[class='menutop m2']
-nextBtn: css: span[onclick='gonext();']
-symbol: id: symboldisplay
-nameTextFld: id: name
-pskeyFld: id: passkey
-submitBtn: id: submit
-proceedLnk: xpath: //a[text()='Proceed']
-sessionObj: id: session_id
-proceedLink: xpath: //a[text()='Proceed']
-downloadLnk:	xpath: //a[contains(@href,'download')]
-signatureField:	id:	signature
-proceedBtn: classname: submit
+anchorTag_Lnks:					xpath:			//a[text()='${val}']
+divTag_menu2:					css:			div[class='menutop m2']
+spanTag_nextBtn: 				xpath:			//span[text()='Go Next']
+divTag_symbol:					id:				symboldisplay
+inputTag_nameTextFld:			id:				name
+inputTag_passkeyFld:			id:				passkey
+inputTag_submitBtn:				id:				submit
+spanTag_sessionObj:				id:				session_id
+inputTag_signatureField:		id:				signature
+inputTag_proceedBtn:			classname:		submit

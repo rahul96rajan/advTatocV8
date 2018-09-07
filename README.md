@@ -2,7 +2,7 @@
 ---
 #### Summary:
 
-Functional Automated Test Suite. This uses Selenium Testing Tool for automated testing of the Project
+Automated Test Suite for T.A.T.O.C. This uses Selenium Testing Tool for automated testing of the Project.
 
 #### System Requirement:
 
@@ -20,5 +20,4 @@ Open terminal and navigate to the root directory of the scripts. Root directory 
 #### Result Files:	
 The Test Execution Results will be stored in the following directory once the test has completed
 
-    ./target/test-output/emailable-report.html (for complete test suite)
-    ./target/surefire-reports/emailable-report.html (for single test suite)
+    ./target/test-output/Tatoc_Advanced_Test_suite/TestSuite.html (for complete test suite)
